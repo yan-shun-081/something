@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Maths-1 Notes Viewer</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      margin: 0;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #333;
+    }
+
+    .section {
+      margin-top: 30px;
+    }
+
+    .dropdown {
+      display: flex;
+      flex-direction: column;
+      max-width: 300px;
+      margin: 0 auto 20px auto;
+    }
+
+    .dropdown button {
+      background-color: #007BFF;
+      color: white;
+      border: none;
+      padding: 10px;
+      margin-top: 5px;
+      cursor: pointer;
+      font-size: 16px;
+      border-radius: 4px;
+    }
+
+    .dropdown button:hover {
+      background-color: #0056b3;
+    }
+
+    iframe {
+      width: 100%;
+      height: 600px;
+      border: 1px solid #ccc;
+      display: none;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Maths-1 Notes</h1>
+
+  <div class="section">
+    <div class="dropdown">
+      <button onclick="showPDF('notes-1.pdf')">📄 Notes 1</button>
+      <button onclick="showPDF('notes-2.pdf')">📄 Notes 2</button>
+      <button onclick="showPDF('notes-3.pdf')">📄 Notes 3</button>
+      <button onclick="showPDF('notes-4.pdf')">📄 Notes 4</button>
+      <button onclick="showPDF('notes-5.pdf')">📄 Notes 5</button>
+    </div>
+
+    <iframe id="pdfViewer"></iframe>
+  </div>
+
+  <script>
+    function showPDF(file) {
+      const viewer = document.getElementById('pdfViewer');
+      viewer.src = file;
+      viewer.style.display = 'block';
+    }
+  </script>
+
+</body>
+</html>
